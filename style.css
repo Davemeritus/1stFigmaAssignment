@@ -1,0 +1,432 @@
+ /* stylelint-disable media-feature-range-notation */
+
+/* import necessary fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
+/* declare root variables */
+:root {
+  --primary-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Poppins', sans-serif;
+}
+
+/* CSS Reset to get a consistent starting state acrosss browsers */
+
+/* Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    -- Add accessible line-height
+    -- Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* ######################################################## */
+
+/* css variables */
+
+/* General styling */
+
+/* reste select element and input:date  */
+select,
+input[type='date'] {
+  appearance: none;
+  background-color: inherit;
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+body {
+  background-color: #f7fdfc;
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.05rem;
+}
+
+p {
+  font-weight: 400;
+  color: #737373;
+}
+
+label {
+  letter-spacing: 0.0063rem;
+  color: #011c34;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+}
+
+.input-container > :nth-child(1) {
+  padding-block: 0.875rem;
+  padding-inline: 1rem 3.25rem;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+}
+
+input::placeholder {
+  color: #737373;
+}
+
+input,
+select {
+  color: #011c34;
+  font: 400 0.875rem/1.25rem var(--secondary-font);
+  height: 3rem;
+  border: 0.0625rem solid #f0f0f0;
+  border-radius: 0.125rem;
+}
+
+.user-data input {
+  padding-block: 0.875rem;
+  padding-inline: 1rem 3.25rem;
+}
+
+select {
+  flex: 1 1 auto;
+  letter-spacing: 0.0125rem;
+  height: 100%;
+}
+
+input[type='date']::-webkit-datetime-edit {
+  color: #011c34;
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0.1875rem 0 #2ec4b6;
+  border: 0.0625rem solid #2ec4b6;
+}
+
+input:hover,
+select:hover {
+  border: 0.0625rem solid #2ec4b6;
+}
+
+.input-container > svg {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+#password > svg {
+  inset-inline-end: 1rem;
+}
+
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+input[type='submit'] {
+  background: none;
+  border: none;
+  background-color: #2ec4b6;
+  box-shadow: 0 0.625rem 2.5rem rgb(0 0 0 / 10%);
+  color: #fff;
+  height: 3rem;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 1rem;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+s {
+  font: 400 0.875rem/1.5625rem var(--secondary-font);
+}
+
+a {
+  font: 500 0.875rem/1.5625rem var(--secondary-font);
+  text-decoration: underline;
+  color: #2ec4b6;
+}
+
+form {
+  border-radius: 0.375rem;
+  background: #fff;
+  box-shadow: 0 0.25rem 3.125rem 0 rgb(4 8 19 / 10%);
+}
+
+.input-container.dropdown > :nth-last-child(1),
+.input-container.dob > :nth-last-child(1) {
+  /* margin-block: .75rem; */
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#password-toggle {
+  width: 1rem;
+  height: 1rem;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.registration-text {
+  text-align: center;
+  margin-inline: 0.375rem;
+}
+
+/* small screen specific styling */
+
+/* !fix to coform with prefix notation */
+@media (max-width: 48rem) {
+  #logo {
+    margin-block: 1.875rem 1.25rem;
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    margin-block: 1.25rem;
+    gap: 0.75rem;
+  }
+
+  h1 {
+    font: 1.875rem / normal var(--primary-font);
+  }
+
+  p {
+    font: 1rem/1.5625rem var(--primary-font);
+  }
+
+  label {
+    font: 600 0.875rem/.875rem var(--primary-font);
+  }
+
+  input::placeholder {
+    font: 300 0.875rem/1.25rem var(--secondary-font);
+  }
+
+  input,
+  select {
+    font: 400 0.875rem/1.25rem var(--secondary-font);
+  }
+
+  .section-container {
+    margin-inline: 1.5rem;
+  }
+
+  .secondary-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  form {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding-inline: 1rem;
+  }
+
+  .user-data {
+    margin-block: 0.75rem;
+  }
+
+  .user-data:nth-child(1) {
+    margin-block-start: 1.5rem;
+  }
+
+  .user-data:nth-child(7) {
+    margin-block-end: 0.5625rem;
+  }
+
+  .user-data:nth-child(8) {
+    margin-block: 0.5625rem 0.9375rem;
+  }
+
+  form > :nth-last-child(1) {
+    margin-block: 0.9375rem 1.875rem;
+  }
+
+  .registration-text {
+    margin-block-end: 4rem;
+  }
+}
+
+/* mid-screen specific styling */
+@media (min-width: 48rem) and (max-width: 64rem) {
+  /* .user-data as grid component(2 columns) start shrinking to uncomfotable level at this breakpoint  range */
+  .section-container {
+    margin: auto;
+    width: 80%;
+    margin-block: 3.125rem;
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #logo {
+    transform: scale(2);
+    margin-block: 1.5625rem;
+  }
+
+  .primary-section {
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    font: 2.5rem / normal var(--primary-font);
+  }
+
+  p {
+    font: 1rem/1.5625rem var(--primary-font);
+  }
+
+  label {
+    font: 600 0.875rem / normal var(--primary-font);
+  }
+
+  input::placeholder {
+    font: 300 0.875rem/1.25rem var(--secondary-font);
+  }
+
+  input,
+  select {
+    font: 400 0.875rem/1.25rem var(--secondary-font);
+  }
+
+  .secondary-section {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 0.25rem 3.125rem 0 rgb(4 8 19 / 10%);
+    padding: 2.5rem;
+  }
+
+  form {
+    background-color: initial;
+    box-shadow: initial;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(6.25rem, 1fr));
+    grid-template-rows: repeat(9, 1fr);
+    gap: 1.5625rem;
+  }
+}
+
+/* DBig screen speceific styling */
+@media (min-width: 64rem) {
+  .section-container {
+    margin: auto;
+    width: 80%;
+    height: 100dvh;
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #logo {
+    transform: scale(2);
+    margin-block: 1.5625rem;
+  }
+
+  .primary-section {
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    font: 2.5rem / normal var(--primary-font);
+  }
+
+  p {
+    font: 1rem/1.5625rem var(--primary-font);
+  }
+
+  label {
+    font: 600 0.875rem / normal var(--primary-font);
+  }
+
+  input::placeholder {
+    font: 300 0.875rem/1.25rem var(--secondary-font);
+  }
+
+  input,
+  select {
+    font: 400 0.875rem/1.25rem var(--secondary-font);
+  }
+
+  .secondary-section {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 0.25rem 3.125rem 0 rgb(4 8 19 / 10%);
+    padding: 2.5rem;
+  }
+
+  form {
+    background-color: initial;
+    box-shadow: initial;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(6.25rem, 1fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 1.875rem;
+  }
+
+  .user-data:nth-child(n + 7),
+  input[type='submit'] {
+    grid-column: span 2;
+  }
+}
