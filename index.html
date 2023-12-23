@@ -7,8 +7,11 @@
     <title>Sign up │ Individual</title>
   </head>
   <body>
+    <!-- Main container for the page -->
     <div class="section-container">
+    <!-- Primary section with the logo -->
       <section class="primary-section">
+               <!-- SVG logo -->
         <svg
           id="logo"
           xmlns="http://www.w3.org/2000/svg"
@@ -17,6 +20,7 @@
           viewBox="0 0 59 60"
           fill="none"
         >
+          <!-- Group for applying filters and clip-path -->
           <g clip-path="url(#clip0_1_457)" filter="url(#filter0_d_1_457)">
             <g opacity="0.1">
               <g opacity="0.1">
@@ -25,11 +29,13 @@
                   d="M10 26.7155H29.3366V7.42401C18.6579 7.42401 10 16.0617 10 26.7155Z"
                   fill="#1E1E1E"
                 />
+                <!-- Colored paths representing the logo -->
                 <path
                   opacity="0.1"
                   d="M48.6663 26.7155C48.6663 16.0617 40.0085 7.42401 29.3298 7.42401V26.7155H48.6663Z"
                   fill="#1E1E1E"
                 />
+              
                 <path
                   opacity="0.1"
                   d="M10 26.7156C10 37.363 18.6579 46.0007 29.3366 46.0007V26.7156H10Z"
@@ -83,7 +89,9 @@
               fill="white"
             />
           </g>
+            <!-- Definitions for filters and clip-path -->
           <defs>
+              <!-- Filter for drop shadow -->
             <filter
               id="filter0_d_1_457"
               x="0"
@@ -118,6 +126,7 @@
                 result="shape"
               />
             </filter>
+           <!-- Clip path for the logo -->
             <clippath id="clip0_1_457">
               <rect
                 width="38.6667"
@@ -136,16 +145,24 @@
           </p>
         </div>
       </section>
+      
+
+<!-- User Information Section -->
       <section class="secondary-section">
+          <!-- User Data Form -->
         <form action="" method="post">
+            <!-- First Name -->
           <div class="user-data">
+
             <label for="firstName">First Name</label>
             <input type="text" name="firstName" id="firstName" />
           </div>
+            <!-- Last Name -->
           <div class="user-data">
             <label for="lastName">Last Name</label>
             <input type="text" name="lastName" id="lastName" />
           </div>
+            <!-- Gender Dropdown -->  
           <div class="user-data">
             <label for="gender">Gender</label>
             <div class="input-container dropdown">
@@ -155,6 +172,7 @@
                 <option value="female">Female</option>
                 <option value="non-binary">Non-binary</option>
               </select>
+              <!-- Gender Dropdown Icon -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -169,6 +187,7 @@
               </svg>
             </div>
           </div>
+            <!-- Date of Birth -->
           <div class="user-data">
             <label for="DoB">Date of Birth</label>
             <div class="input-container dob">
@@ -178,6 +197,7 @@
                 id="DoB"
                 placeholder="Select here"
               />
+              <!-- Calendar Icon -->
               <svg
                 id="calendar-button"
                 xmlns="http://www.w3.org/2000/svg"
@@ -193,6 +213,7 @@
               </svg>
             </div>
           </div>
+            <!-- Weight -->
           <div class="user-data">
             <label for="weight">Weight (KG)</label>
             <input
@@ -202,6 +223,7 @@
               placeholder="Enter weight"
             />
           </div>
+            <!-- Height -->
           <div class="user-data">
             <label for="height">Height (CM)</label>
             <input
@@ -211,6 +233,7 @@
               placeholder="Enter height"
             />
           </div>
+            <!-- Activity Level Dropdown -->
           <div class="user-data">
             <label for="activityLevel">Activity Level</label>
             <div class="input-container dropdown">
@@ -220,6 +243,7 @@
                 <option value="">Placeholder</option>
                 <option value="">Placeholder</option>
               </select>
+              <!-- Activity Level Dropdown Icon --> 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -234,10 +258,12 @@
               </svg>
             </div>
           </div>
+            <!-- Password -->
           <div class="user-data">
             <label for="password">Password</label>
             <div class="input-container password-box">
               <input type="password" name="password" id="password" />
+              <!-- Password Toggle Icon --> 
               <svg
                 id="password-toggle"
                 xmlns="http://www.w3.org/2000/svg"
@@ -257,8 +283,10 @@
               </svg>
             </div>
           </div>
+              <!-- Submit Button -->
           <input type="submit" value="Register" />
         </form>
+          <!-- Registration Text -->
         <div class="registration-text">
           <span
             >By clicking Register, you agree to our
